@@ -16,5 +16,8 @@
     "url": "https://github.com/heathcw/training/issues"
   },
   "homepage": "https://github.com/heathcw/training#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
