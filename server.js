@@ -12,6 +12,9 @@ app.get('/todos', (req, res) => { res.status(200).json(todos); });
 
 // Route to create a new todo 
 app.post('/todos', (req, res) => { const { task } = req.body;
+  if (!task) {
+    return res.status(400).json({ error: 'Task is required' });
+  }
   const newTodo = { id: todos.length + 1, task, completed: false }; 
   todos.push(newTodo);
   res.status(201).json(newTodo); 
